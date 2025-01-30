@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Variáveis globais */
+:root {
+  --primary-color: #3498db;
+  --primary-color-light: #c0e6ff;
+  --primary-hover-color: #2980b9;
+  --background-color: #f4f4f9;
+  --text-color: #333;
+  --light-text-color: #666;
+  --container-bg-color: #fff;
+  --border-color: #ddd;
+  --border-radius: 10px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --font-family: "Red Hat Display", serif;
+  --font-heading: "DM Serif Text", serif;
+  --font-size-large: 2rem;
+  --font-size-medium: 1.1rem;
+  --font-size-small: 0.9rem;
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 1.5rem;
+  --input-padding: 0.75rem;
+  --button-padding: 0.75rem;
+  --success-color: #28a745;
+  --success-bg-color: #d4edda;
+  --success-border-color: #c3e6cb;
+  --error-color: #dc3545;
+  --error-bg-color: #f8d7da;
+  --error-border-color: #f5c6cb;
+  --border-radius: 5px;
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+}
+
+/* Reset básico para remover margens e paddings padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo global para o corpo da página */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: var(--spacing-medium);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container principal */
+.container {
+  background: var(--container-bg-color);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Estilo para o título */
+h1 {
+  font-size: var(--font-size-large);
+  font-family: var(--font-heading);
+  margin-bottom: var(--spacing-medium);
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Estilo para o parágrafo */
+p {
+  font-size: var(--font-size-medium);
+  margin-bottom: var(--spacing-large);
+  color: var(--light-text-color);
+  text-align: center;
+}
+
+/* Estilo para o formulário */
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo para os labels */
+label {
+  font-size: var(--font-size-medium);
+  margin-bottom: var(--spacing-small);
+  color: var(--text-color);
+}
+
+/* Estilo para os inputs */
+input[type="text"] {
+  padding: var(--input-padding);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-medium);
+  margin-bottom: var(--spacing-medium);
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary-color);
+  outline: 3px solid var(--primary-color-light);
+}
+
+/* Estilo para o botão */
+.btn-primary {
+  padding: var(--button-padding);
+  background-color: var(--primary-color);
+  color: var(--container-bg-color);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-medium);
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  :root {
+    --font-size-large: 1.5rem;
+    --font-size-medium: 0.9rem;
+    --spacing-large: 1rem;
+  }
+
+  .container {
+    padding: var(--spacing-medium);
+  }
+}
+
+/* Estilo para a mensagem de sucesso */
+.par-success {
+  background-color: var(--success-bg-color);
+  color: var(--success-color);
+  border: 1px solid var(--success-border-color);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: var(--font-size-medium);
+  margin-top: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para a mensagem de erro */
+.par-error {
+  background-color: var(--error-bg-color);
+  color: var(--error-color);
+  border: 1px solid var(--error-border-color);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: var(--font-size-medium);
+  margin-top: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
